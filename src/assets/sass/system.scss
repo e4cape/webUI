@@ -1,0 +1,74 @@
+.first-left {
+  .el-form-item {
+    margin-bottom: 16px;
+    .el-form-item__error {
+      padding: 2px 0 0;
+    }
+  }
+  .el-input {
+    &>input {
+      height: 30px;
+      padding-top: 0;
+      padding-bottom: 0; 
+    }
+  }
+}
+
+.fontred {
+  font-size: 14px;
+  color: red;
+}
+/* @module 设置微信二维码弹窗样式 */
+.WeChat_pay {
+  .el-radio {
+    .el-radio__label {
+      padding: 7px 0;
+      padding-left: 55px;
+      background: url('~/static/image/WeChat_pay.png') 17px 0 no-repeat;
+    }
+  }
+}
+
+.pay {
+  width: 100%;
+  margin-top: 42px;
+  text-align: center;
+}
+/* End 设置微信二维码弹窗样式 */
+
+.btn-link {
+  font-family: sans-serif !important;
+  font-size: 12px !important;
+}
+.create-store {
+  .el-dialog__body {
+    text-align: left;
+  }
+  .label-dialog {
+    margin-left: 20px;
+    text-align: left;
+  }
+  .radio-group-dialog {
+    margin: 20px 20px 30px;
+    > span {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 12px;
+      color: #99a6ba;
+    }
+  }
+  .red-dialog {
+    margin-left: 10px;
+    color: red;
+  }
+}
+.super-mini {
+  margin-bottom: 12px!important;
+  width: 100%;
+  .el-form-item__content {
+    width: 100%!important;
+  }
+}
+.logoImg {
+  margin-top: 10px; 
+}

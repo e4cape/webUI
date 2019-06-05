@@ -1,0 +1,346 @@
+// ERP 成品库存等多处使用
+// 货品表格
+.goods-wrapper {
+  padding: 0 10px 10px 10px;
+  box-sizing: content-box;
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+  display: flex;
+
+  .goods-left {
+    position: relative;
+    background-color: $bg-color;
+    border: solid 1px $border-color;
+    margin-right: 15px;
+    display: inline-block;
+    width: 35%;
+    flex: 1;
+    max-width: 500px;
+    min-width: 400px;
+    min-height: 600px;
+    padding-bottom: 80px;
+
+    .goods-table {
+      width: 100%;
+      margin-bottom: 40px;
+      font-size: 12px;
+      color: $font-color;
+
+      >thead>:first-child {
+        background-color: $bg-color;
+      }
+
+      tr {
+        color: $font-color;
+        background-color: $white;
+
+        >:first-child {
+          width: 18%;
+          padding-left: 5%;
+        }
+
+        >:nth-child(2) {
+          padding: 0 2%;
+          width: 23%;
+        }
+
+        >:nth-child(3) {
+          padding: 0 2%;
+          width: 30%;
+        }
+
+        :nth-child(4) {
+          width: 15%;
+        }
+
+        :last-child {
+          text-align: left;
+
+          .el-button span {
+            color: #da0000;
+          }
+        }
+
+        &.active {
+          background-color: #20A0FF;
+          color: $white;
+
+          .el-button--text {
+            color: $white;
+          }
+
+          >span {
+            color: $white;
+          }
+
+          td:last-child:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: -5px;
+            border: 5px solid #20A0FF;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      th {
+        height: 32px;
+        color: #7f7f7f;
+        font-weight: bold;
+        border-bottom: solid 1px $border-color;
+      }
+
+      td {
+        cursor: pointer;
+        position: relative;
+        width: auto;
+        max-width: 80px;
+        height: 32px;
+        border-bottom: solid 1px $border-color;
+        font-size: 12px;
+
+        .tit {
+          color: #777777;
+        }
+
+        &:not(:last-child) {
+          white-space: nowrap;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .toolsbar {
+      font-size: $small-font;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 66px;
+      border-top: solid 1px $border-color;
+
+      .count-bar {
+        padding: 0 15px;
+        height: 32px;
+        font-size: 12px;
+        color: $font-color;
+        line-height: 32px;
+        background: #f5f5f5;
+
+        b {
+          font-weight: bold;
+          color: #ffa200;
+        }
+      }
+    }
+  }
+
+  .goods-right {
+    height: 100%;
+    display: inline-block;
+    flex: 2;
+    border: 1px solid $border-color;
+    vertical-align: top;
+    overflow: auto;
+
+    .panel {
+      border: none;
+
+      .panel-hd {
+        border: none;
+        border-bottom: 1px solid $border-color;
+        height: 32px;
+        .title {
+          line-height: 32px;
+        }
+      }
+
+      .panel-bd {
+        padding: 20px 20px 10px;
+      }
+    }
+
+    .btn-edit {
+      position: absolute;
+      top: 2px;
+      right: 10px;
+    }
+  }
+}
+
+.myPagination-bar {
+  position: relative;
+  color: $font-color;
+  background-color: $white;
+  height: 32px;
+  text-align: center;
+  border-bottom: solid 1px $border-color;
+
+  .el-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 20px;
+    margin: 6px 0 6px 6px !important;
+
+    .el-input__suffix {
+      right: 0;
+
+      .el-input__icon {
+        line-height: 20px;
+      }
+
+      .el-icon-arrow-up {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .el-input__inner {
+      font-size: $small-font;
+      padding-right: 28px;
+      height: 20px;
+      border: solid 1px $border-color;
+      border-radius: 0;
+    }
+  }
+
+  .pagination-controller {
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 0;
+
+    .prev-btn,
+    .next-btn {
+      vertical-align: middle;
+      width: 30px;
+      height: 22px;
+      padding: 0;
+      background-color: #399fe5;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0581d7;
+      }
+
+      &.isDisabled {
+        background-color: $border-color;
+        cursor: no-drop;
+      }
+
+      .el-icon-arrow-left,
+      .el-icon-arrow-right {
+        position: relative;
+        top: 1px;
+        transform: scale(0.83);
+        font-size: 12px;
+        color: $white;
+      }
+    }
+
+    .current-page {
+      display: inline-block;
+      padding: 0 10px;
+      min-width: 30px;
+      height: 22px;
+      line-height: 22px;
+      font-size: 12px;
+      color: $font-color;
+      vertical-align: middle;
+    }
+  }
+
+  .total {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: $small-font;
+    color: $font-color;
+  }
+}
+
+/* End 货品表格 */
+
+/* @module 表格容器 */
+.table-block {
+  padding: 0 10px 10px;
+
+  .details-table {
+    margin: 0;
+    width: 100%;
+
+    td {
+      width: 20%;
+    }
+
+    .tit {
+      width: 10%;
+    }
+  }
+}
+
+/* End 表格容器 */
+
+
+/* @module 左右结构的数据表格 */
+.details-table-double,
+.details-table-dialog {
+  .details-table {
+    font-size: 12px;
+    border-top: solid 1px $border-color;
+    border-left: solid 1px $border-color;
+
+    .note {
+      max-width: 300px;
+      word-break: break-word;
+      word-break: break-all;
+    }
+
+    th,
+    td {
+      height: 25px;
+      padding: 0 8px;
+      border-right: solid 1px $border-color;
+      border-bottom: solid 1px $border-color;
+    }
+
+    th,
+    .tit {
+      background-color: #f5f5f5;
+      color: #555;
+      text-align: right;
+    }
+
+    th {
+      font-weight: normal;
+      text-align: center;
+    }
+
+    td {
+      text-align: left;
+      color: $font-color;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+}
+
+/* @module 表格中input过多时 */
+.tabs-input{
+  .el-input-number .el-input__inner{
+    width: 120px;
+  }
+}

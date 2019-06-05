@@ -1,0 +1,423 @@
+.retail-table {
+  .table-hd {
+    color: #777;
+    font-weight: 500;
+    font-size: 14px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    background: $bg-color;
+
+    >:nth-child(1) {
+      width: 200px;
+    }
+
+    >:nth-child(2) {
+      width: 100px;
+      max-width: 100px;
+    }
+
+    >:nth-child(3) {
+      width: 100px;
+      max-width: 100px;
+    }
+
+    >:nth-child(4) {
+      width: 120px;
+      max-width: 120px;
+    }
+
+    >:nth-child(5) {
+      width: 100px;
+      max-width: 100px;
+    }
+
+    >:nth-child(6) {
+      width: 80px;
+      max-width: 80px;
+    }
+
+    >:nth-child(7) {
+      width: 240;
+      max-width: 240;
+    }
+
+    th {
+      width: 14.185%;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  tr {
+    background: $bg-color;
+    color: $gray;
+    width: 100%;
+  }
+
+  .item-show-some {
+    max-height: 338px;
+    padding: 0;
+    overflow: hidden;
+
+    .top {
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .price-list {
+        margin-top: 10px;
+      }
+    }
+
+    .top4 {
+      top: 112px;
+    }
+  }
+
+  .item-show-all {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-height: auto;
+    height: auto;
+    padding-bottom: 20px;
+    
+    .price-list {
+      min-height: 40px;
+    }
+  }
+
+  .item-warpper {
+    position: relative;
+
+    .more-list-query {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.retail-table-inline {
+  background: $white;
+  width: 100%;
+
+  >tbody :first-child{
+    >:last-child{
+      width: 240;
+      max-width: 240;
+      border: none;
+    }
+  }
+  
+  tr {
+    background: $white;
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+
+    >:nth-child(1) {
+      width: 200px;
+      max-width: 200px;
+      text-align: left !important;
+    }
+
+    >:nth-child(2) {
+      width: 100px;
+      max-width: 100px;
+    }
+
+    >:nth-child(3) {
+      width: 100px;
+      max-width: 100px;
+    }
+
+    >:nth-child(4) {
+      width: 120px;
+      max-width: 120px;
+    }
+
+    >:nth-child(5) {
+      width: 100px;
+      max-width: 100px;
+    }
+
+    >:nth-child(6) {
+      width: 80px;
+      max-width: 80px;
+    }
+
+
+
+    td {
+      color: $font-color;
+      position: relative;
+      border-right: 1px solid $border-color;
+      line-height: 60px;
+      text-align: center;
+      width: 14.185%;
+      height: 60px;
+      padding: 5px 0;
+      overflow: hidden;
+
+      .copyBTN {
+        width: 80%;
+
+        span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+        }
+      }
+
+      .item-img {
+        vertical-align: middle;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        margin: 5px;
+
+        img {
+          vertical-align: top;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+  }
+
+  .show2line {
+    max-width: 300px;
+    width: 100%;
+    vertical-align: middle;
+    padding: 5px 0;
+    line-height: 25px !important;
+    overflow: hidden;
+
+    p {
+      width: 100%;
+      overflow: hidden;
+      height: 25px;
+
+      >:first-child {
+        max-width: calc(100% - 70px);
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      margin:0;
+      padding:0;
+    }
+
+    div {
+      height: 25px;
+      overflow: hidden;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+    .el-tag {
+      vertical-align: top;
+      margin: 3px;
+      overflow: hidden;
+    }
+  }
+
+  .no-cur {
+
+    span,
+    p {
+      cursor: default !important;
+    }
+  }
+}
+
+
+
+.price-list,
+.show3line {
+  line-height: 20px;
+
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    margin: 0 !important;
+    overflow: hidden;
+
+    span {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+      height: 20px;
+      overflow: hidden;
+      max-width: 45%;
+      display: inline-block;
+    }
+  }
+}
+
+.pay-type {
+  line-height: 20px;
+  height: 20px;
+
+  span {
+    height: 20px;
+  }
+
+  &:after {
+    content: ')';
+    vertical-align: top;
+  }
+
+  &:before {
+    content: '(';
+    vertical-align: top;
+  }
+}
+
+.text-overflow {
+  width: 95%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  span, b, a, p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+
+.w100 {
+  width: 100%;
+}
+
+.info-head {
+  border-bottom: 1px solid $border-color;
+  background: #eaeff3 !important;
+  color: #333;
+}
+
+.info-head span {
+  display: inline-block;
+}
+
+.info-head .cell {
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px !important;
+  text-align: left;
+
+  div {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .text {
+    span {
+      margin-right: 10px;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+
+   >:last-child{
+     margin-right: 0;
+   }
+}
+
+.more-list-query {
+  height: 22px;
+  line-height: 22px;
+  color: #006db8;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  background-color: $bg-color;
+
+  cursor: pointer;
+}
+
+.item-show-some .more-list-query:after {
+  content: '展 开 更 多 ▼';
+}
+
+.item-show-all .more-list-query:after {
+  content: '收 起 更 多 ▲';
+}
+
+/* tag标签 */
+.el-tag {
+  height: 16px;
+  line-height: 16px;
+  padding: 1px 5px;
+  margin: 0 4px;
+  border-radius: 0;
+  box-sizing: content-box;
+}
+
+/* end tag标签 */
+
+.el-tag--info-61a9da {
+  color: $white;
+  background: #61a9da;
+}
+
+.el-tag--info-b1 {
+  color: $white;
+  background: #b1b1b1;
+  position: relative;
+}
+
+.el-tag--info-b1b1b1 {
+  color: $white;
+  background: #b1b1b1;
+  position: relative;
+  padding-left: 25px;
+}
+
+.el-tag--info-b1b1b1:after {
+  content: '-';
+  border-radius: 50%;
+  background: $white;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  line-height: 14px;
+  color: #b1b1b1;
+  position: absolute;
+  left: 5px;
+  top: 1px;
+}
+
+.el-tag--info---555 {
+  color: $white;
+  background: #555;
+}
+

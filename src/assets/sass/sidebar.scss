@@ -1,0 +1,109 @@
+@import 'compass/css3';
+
+// 边栏
+.side-bar {
+  height: 100%;
+  position: relative;
+  transition:1s width;
+  display:flex;
+}
+
+// 系统连接
+.sys-tab {
+
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  @include transition-property(width);
+  @include transition-duration(.4s);
+  li {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+    div{
+      display:flex;
+    }
+    span {
+      font-size: 14px;
+      width: 40px;
+
+      vertical-align: middle;
+      text-align: center;
+    }
+    .sys-link {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      white-space:nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+// 菜单
+.sys-menu {
+  width: 140px;
+  font-size: 12px;
+  height: 100%;
+  overflow: hidden;
+    @include transition-property(width);
+    @include transition-duration(.4s);
+  .menu-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+
+    span {
+      display: inline-block;
+      width: 113px;
+      text-align: left;
+      text-indent: 5px;
+    }
+    i{
+      cursor: pointer;
+      &:hover{
+        @include opacity(.8)
+      }
+    }
+  }
+  .el-menu {
+    border-right: none;
+  }
+
+
+}
+
+// 菜单伸缩按钮
+.sys-menu-flex {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    line-height: 48px;
+    margin-top: -24px;
+    height: 48px;
+    width: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 22;
+    span{
+    	margin-left: -8px;
+    }
+    i{
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -5px;
+    	right: 0;
+      font-size: 12px;
+    }
+  }
+.sys-menu-rotate{
+  transform:rotate(180deg);
+  right: -12px;
+}

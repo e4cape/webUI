@@ -1,0 +1,33 @@
+const getters = {
+  access_token: state => state.session.access_token,
+  wechatSettingType: state => state.session.wechatSettingType,
+  user_session: state => state.session.user_session,
+  is_loading: state => state.common.is_loading,
+  tb_loading: state => state.common.tb_loading,
+  full_loading: state => state.common.full_loading,
+  areas: state => state.common.areas,
+  categoryType: state => state.common.categoryType,
+  goldType: state => state.common.goldType,
+  materialType: state => state.common.materialType,
+  seriesType: state => state.common.seriesType,
+  paymentType: state => state.common.paymentType,
+  kindType: state => state.common.kindType,
+  menuWidth: state => state.common.menuWidth,
+  desks: state => state.common.desks,
+  stores: state => state.common.stores,
+  users: state => state.common.users,
+  suppliers: state => state.common.suppliers,
+  reasons: state => state.common.reasons,
+  wareHouses: state => state.common.wareHouses,
+  creators: state => state.common.creators,
+  departments: state => state.common.departments,
+  company_and_stores: state => state.common.company_and_stores,
+  roles: state => state.common.roles,
+  menus: state => state.common.menus,
+  businessDate: state => state.common.businessDate,
+  stone: state => state.common.stone,
+  part: state => state.common.part,
+  stoneWeight: state => state.common.stoneWeight
+}
+
+export default getters

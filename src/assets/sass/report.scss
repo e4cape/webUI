@@ -1,0 +1,84 @@
+// 报表公共样式
+.total-panel {
+  padding: 0 10px;
+
+  .total {
+    line-height: 28px;
+    padding: 15px 0;
+    color: #fff;
+    text-align: center;
+
+    &.qty {
+      background-color: #FFC045;
+    }
+
+    &.weight {
+      background-color: #DF5A5B;
+    }
+
+    &.price {
+      background-color: #B65F7F;
+    }
+
+    &.cashier {
+      background-color: #39A0E5;
+    }
+
+    .number {
+      font-size: 20px;
+    }
+  }
+
+  .sale-tag {
+    height: 114px;
+    padding: 20px 4px;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 18px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+
+    &.sale {
+      background-color: #399fe5;
+    }
+
+    &.junk {
+      background-color: #b1b1b1;
+    }
+  }
+}
+
+.top-title {
+  color: #777;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+.top-line-search {
+
+  .el-select+.el-button,
+  .el-cascader+.el-select,
+  .el-select+.el-select,
+  .el-select+.el-select,
+  .el-select+.el-date-editor {
+    margin-left: 2px;
+  }
+
+  .el-date-editor+.el-button {
+    margin-left: 2px;
+  }
+
+  .to-tip {
+    width: 32px;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.el-table +.el-table{
+  border-top: none;
+}

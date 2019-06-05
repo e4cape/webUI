@@ -1,0 +1,416 @@
+@import 'compass/css3';
+
+.header-main {
+  .logo {
+    font: 22px/50px Microsof Yahei, Arial;
+
+    float: left;
+    overflow: hidden;
+
+    max-width: 300px;
+    height: 50px;
+    padding: 0 10px;
+
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .header-content {
+    margin-left: 180px;
+    padding-right: 10px;
+    @include display-flex;
+    @include flex-wrap(wrap);
+     > div {
+      @include flex(1 0);
+
+      &:first-child {
+        font: 14px/50px Microsof YaHei, Arial;
+
+        text-align: left;
+
+        span {
+          padding-left: 10px;
+        }
+      }
+
+      &.user-tool {
+        line-height: 50px;
+
+        height: 50px;
+
+        text-align: right;
+
+        .user-tool-link {
+          padding-left: 10px;
+
+           > span {
+            font-size: 16px;
+
+            position: relative;
+
+            display: inline-block;
+
+            width: 38px;
+
+            cursor: pointer;
+            text-align: center;
+
+            &.is-new-note {
+              &:before {
+                position: absolute;
+                z-index: 9;
+                top: 13px;
+                right: 12px;
+
+                display: block;
+
+                width: 5px;
+                height: 5px;
+
+                content: '';
+
+                border-radius: 50%;
+;
+                background: red;
+              }
+            }
+
+            &:last-child {
+              margin-right: 10px;
+            }
+
+            i:first-child {
+              font-size: 0;
+
+              float: right;
+
+              width: 1px;
+              height: 12px;
+              margin-top: 18px;
+            }
+
+            &:last-child {
+              i:first-child {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .user {
+          float: right;
+
+          .user-dropdown-link {
+            line-height: 50px;
+
+            display: inline-block;
+
+            img {
+              display: inline-block;
+
+              margin-right: 10px;
+
+              vertical-align: middle;
+
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .theme-set {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 200px;
+    height: 100%;
+
+    &.is-active {
+      display: block;
+    }
+
+    .slide-title {
+      font-size: 12px;
+      font-weight: normal;
+
+      padding: 0 15px;
+
+      i {
+        font-size: 16px;
+
+        float: right;
+
+        cursor: pointer;
+      }
+    }
+
+    .theme-list {
+      width: 156px;
+      height: calc(100% - 200px);
+      margin: 15px auto 0;
+
+      li {
+        line-height: 36px;
+
+        position: relative;
+
+        height: 36px;
+        margin-bottom: 10px;
+
+        cursor: pointer;
+        text-align: center;
+
+        i {
+          display: none;
+          float: right;
+
+          margin-top: 8px;
+          margin-right: 10px;
+        }
+
+        &.cur {
+          i {
+            position: absolute;
+            right: 5px;
+
+            display: block;
+          }
+        }
+      }
+    }
+
+    .btn-set {
+      line-height: 28px;
+
+      display: block;
+
+      width: 118px;
+      height: 28px;
+      margin: 0 auto 10px;
+
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+  .shadow {
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+
+    display: none;
+
+    width: 100%;
+    height: calc(100% - 50px);
+
+    background: rgba(255,255,255,0);
+  }
+}
+
+.init-userdrodown {
+  min-width: 100px;
+}
+
+.informs-left {
+  line-height: 1.5;
+
+  width: 250px;
+
+  background: #f5f5f5;
+
+  .informs-left-header {
+    line-height: 40px;
+
+    height: 40px;
+    padding-left: 10px;
+
+    span {
+      padding-left: 10px;
+    }
+  }
+
+  .informs-left-item {
+    width: 250px;
+    height: 317px;
+  }
+
+  .item-list {
+    font-size: 12px;
+    line-height: 30px;
+
+    position: relative;
+
+    height: 30px;
+
+//padding-left: 10px;
+
+    cursor: pointer;
+    span {
+      display: block;
+      overflow: hidden;
+
+      white-space: nowrap;
+      text-indent: 10px;
+      text-overflow: ellipsis;
+    }
+
+    i {
+      position: absolute;
+      z-index: 99;
+      top: 50%;
+      right: -5px;
+
+      visibility: hidden;
+
+      width: 0;
+      height: 0;
+      margin-top: -5px;
+
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid #399fe5;;
+    }
+
+    &.active {
+      color: #fff;
+      background: #399fe5;
+
+      i {
+        visibility: initial;
+      }
+    }
+  }
+}
+
+.left-bottom {
+  line-height: 30px;
+
+  position: relative;
+
+  height: 30px;
+
+  text-align: center;
+
+  border-top: 1px #e5e5e5 solid;
+
+  a {
+    font-size: 20px;
+
+    position: absolute;
+
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    &:first-child {
+      top: 0;
+      left: 0;
+
+      border-right: 1px #e5e5e5 solid;
+    }
+
+    &:last-child {
+      top: 0;
+      right: 0;
+
+      border-left: 1px #e5e5e5 solid;
+    }
+
+    &.disabled {
+      cursor: default;
+
+      color: #ccc;
+    }
+  }
+}
+
+.informs-right {
+  flex: 1;
+
+  width: 1%;
+
+  border-left: 1px #e5e5e5 solid;
+}
+
+.informs-right-item {
+  padding: 20px;
+
+  .inform-right-title {
+    font-size: 18px;
+
+    overflow: hidden;
+
+    margin-bottom: 15px;
+
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .info {
+    font-size: 12px;
+
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px #e5e5e5 solid;
+
+    @include display-flex;
+
+@include flex-wrap(wrap);
+    div {
+      @include flex(1 0);
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .inform-right-content {
+    font-size: 12px;
+    line-height: 1.5;
+
+    overflow: hidden;
+    overflow-y: auto;
+
+    max-height: 275px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+.header-help {
+  span {
+    font-size: 18px;
+
+    display: block;
+
+    text-align: center;
+
+    color: #bb9a4e;
+  }
+
+  .help-code {
+    height: 210px;
+
+    text-align: center;
+
+    @include display-flex;
+  }
+
+  .service {
+    font-size: 16px;
+
+    vertical-align: middle;
+  }
+}

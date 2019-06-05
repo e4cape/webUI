@@ -1,0 +1,344 @@
+.science-search {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+
+  .group {
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+    background-color: #f5f5f5;
+
+    &.active {
+      color: #fff;
+      background-color: #ffa200;
+    }
+  }
+}
+
+.no-data {
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  color: #999;
+}
+
+.ad {
+  width: 100%;
+  max-height: 90px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.dy-alert {
+  background-color: #f5f5f5;
+  padding: 12px 10px;
+  font-size: 14px;
+
+  .gray {
+    color: #777;
+  }
+
+  .black {
+    color: #333;
+  }
+
+  .yellow {
+    color: #ffa200;
+  }
+}
+
+.blue {
+  color: #1f91df;
+}
+
+.i-red {
+  color: #da0000;
+}
+
+.dy-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 16px;
+
+  span {
+    display: inline-block;
+    color: #777777;
+    font-weight: 800;
+    padding: 0px 12px 8px;
+    margin-bottom: -3px;
+    border-bottom: #1f91df solid 3px;
+  }
+}
+
+.zt-content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 100%;
+
+  .zt {
+    display: flex;
+    width: calc(50% - 5px);
+    background-color: #f5f5f5;
+    margin-top: 10px;
+
+    &:nth-child(2n) {
+      margin-left: 10px;
+    }
+
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 310px;
+      height: 174px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .context {
+      padding: 12px;
+      width: calc(100% - 310px);
+
+      .title {
+        color: #333;
+        width: 100%;
+        font-weight: 800;
+        font-size: 14px;
+        height: 28px;
+        line-height: 28px;
+        white-space: nowrap;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .text {
+        margin-top: 3px;
+        height: 22px;
+        text-indent: 2em;
+        line-height: 22px;
+        color: #777;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+      }
+    }
+  }
+}
+
+.videos,
+.wai-scroll {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+
+  .nei-video {
+    clear: both;
+    width: calc(100% + 10px);
+    overflow: hidden;
+
+    .video {
+      display: inline-block;
+      background-color: #f9f9f9;
+      width: calc(20% - 10px);
+      margin: 0px 10px 10px 0px;
+      overflow: hidden;
+
+      .img {
+        position: relative;
+        padding-top: 56.25%;
+        overflow: hidden;
+
+        .imgCancel {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 1;
+        }
+
+        .back-img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          transition: all 0.4s;
+          background-size: 100% 100%;
+        }
+
+        span {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          padding: 7px 10px;
+          color: #fff;
+          background-color: #ffa200;
+          border-radius: 0 0 2px 2px;
+        }
+
+        i {
+          position: absolute;
+          font-size: 120px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          color: #fff;
+          opacity: 0;
+          transition: all 0.4s;
+        }
+
+        &:hover {
+          .back-img {
+            transform: translate(-50%, -50%) scale(1.1);
+          }
+
+          i {
+            opacity: 1;
+            font-size: 60px;
+          }
+        }
+      }
+
+      .title {
+        height: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        span {
+          display: inline-block;
+          color: #333;
+          vertical-align: middle;
+          font-size: 12px;
+          font-weight: 800;
+          width: calc(100% - 23px);
+          white-space: nowrap;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        i.icon-video {
+          display: inline-block;
+          vertical-align: middle;
+          padding-right: 5px;
+          color: #ffa200;
+          font-size: 16px;
+        }
+      }
+
+      .times {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px 5px;
+        color: #999;
+
+        .category {
+          width: calc(100% - 70px);
+          white-space: nowrap;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.mugen-scroll {
+  width: 100%;
+
+  .loadings {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#gift-dynamics {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: calc(100% + 26px);
+  margin-right: -26px;
+}
+
+.sys-select {
+  width: 100px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .zt-content {
+    .zt {
+      width: 100%;
+
+      &:nth-child(2n) {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1940px) {
+  .videos .nei-video .video {
+    width: calc(20% - 10px);
+
+    &:nth-child(11) {
+      display: none !important;
+    }
+
+    &:nth-child(12) {
+      display: none !important;
+    }
+  }
+
+  .wai-scroll .nei-video .video {
+    width: calc(20% - 10px);
+  }
+}
+
+@media (min-width: 1940px) {
+  .videos .nei-video .video,
+  .wai-scroll .nei-video .video {
+    width: calc(16% - 10px);
+  }
+}
+
+@media (max-width: 1680px) {
+  .videos .nei-video .video {
+    width: calc(25% - 10px);
+
+    &:nth-child(9) {
+      display: none;
+    }
+
+    &:nth-child(10) {
+      display: none;
+    }
+
+    &:nth-child(11) {
+      display: none;
+    }
+
+    &:nth-child(12) {
+      display: none;
+    }
+  }
+
+  .wai-scroll .nei-video .video {
+    width: calc(25% - 10px);
+  }
+}

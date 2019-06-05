@@ -1,0 +1,98 @@
+/* @module 关键字回复 */
+.popup-Window{
+  .el-dialog--tiny{
+    width: 800px;
+  }
+}
+.picture-reply{
+  position: relative;
+  width: 285px;
+  height: 150px;
+  margin-top: 10px;
+  &.active{
+    background-color: #F1F1F1;
+    border: 1px solid #ccc;
+  }
+  .img-border{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 5;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  span{
+    position: absolute;
+    right: 0;
+    width: 130px;
+    text-align: left;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .title{
+    top: 5px;
+  }
+  .message{
+    top: 30px;
+  }
+}
+.form-rules{
+  .btn-up{
+    display: inline-block;
+    .el-button{
+      span{
+        color: #fff;
+      }
+    }
+  }
+}
+.addrules{
+  margin-top: 10px;
+  width: 100%;
+}
+.buttons{
+  float: left;
+  margin-left: 20px;
+}
+.autokeyword{
+  .el-form-item{
+    margin-bottom: 20px;
+  }
+}
+.initBtn{
+  span{
+    color: #fff;
+  }
+}
+ /* END 关键字回复 */
+ 
+ /* @module 关注回复 */
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
+.el-icon-plus{
+  position: relative;
+  width: 178px;
+  height:178px;
+  &::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+ /* END 关注回复 */

@@ -1,0 +1,104 @@
+/* @module Variate */
+
+/* Color */
+
+$blue: #1e2e45; // 主题蓝
+$dark-blue: #004777; // 深蓝色（active）
+$light-blue: #007ed5; // 浅蓝色（hover）
+$border-color: #e5e5e5; // 边框色
+$bg-color: #f5f5f5; // 浅灰色背景
+$font-color: #333; // 基本字体颜色
+$gray: #555; // 中灰色字体
+$light-gray: #999; // 浅灰色字体
+$white: #fff; // 白色字体
+$gold: #c29b01; // 金色（按钮）
+$light-gold: #d8ad05; // 亮金色（按钮 hover）
+$em-color: #aaa; // em描述颜色
+$line-dark-bule: #152335;
+$line-light-blue: #3f5d6f;
+/* Font-size */
+
+$large-font: 24px; // 大号字体（大标题）
+$middle-font: 16px; // 中号字体（小标题）
+$base-font: 14px; // 基本字体（内容）
+$small-font: 12px; // 小号字体（标注等）
+/* Grid */
+
+$nav-width: 240px; // 左侧导航宽度
+/* End Variate */
+
+/* @module Mixin */
+
+/* 按钮内发光 */
+
+@mixin inner-glow($color) {
+    box-shadow: inset 0 0 3px $color;
+}
+
+//是否支持某个浏览器的前缀，如果你不想支持，可以设置为false
+//----------------------------
+$prefix-for-webkit: true !default;
+$prefix-for-mozilla: true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera: true !default;
+$prefix-for-spec: true !default; // 标准版
+// prefixer
+//----------------------------
+@mixin prefixer($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        @if $prefix==webkit and $prefix-for-webkit==true {
+            -webkit-#{$property}: $value;
+        }
+        @else if $prefix==moz and $prefix-for-mozilla==true {
+            -moz-#{$property}: $value;
+        }
+        @else if $prefix==ms and $prefix-for-microsoft==true {
+            -ms-#{$property}: $value;
+        }
+        @else if $prefix==o and $prefix-for-opera==true {
+            -o-#{$property}: $value;
+        }
+        @else if $prefix==spec and $prefix-for-spec==true {
+            #{$property}: $value;
+        }
+        @else {
+            @warn "Unrecognized prefix: #{$prefix}";
+        }
+    }
+}
+
+@mixin box-shadow($shadow...) {
+    @include prefixer(box-shadow, $shadow, webkit moz ms spec);
+}
+
+@mixin box-sizing($bs) {
+    @include prefixer(box-sizing, $bs, webkit moz ms spec);
+}
+
+@mixin radius($radius) {
+    @include prefixer(border-radius, $radius, webkit moz ms spec);
+}
+
+@mixin transition($trans...) {
+    @include prefixer(transition, $trans, webkit moz ms spec);
+}
+
+@mixin transform($trans...) {
+    @include prefixer(transform, $trans, webkit moz ms spec);
+}
+
+@mixin exlips {
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin bgfilter {
+    background-image: -webkit-gradient( linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #f2f2f2));
+    background-image: -moz-linear-gradient(#fcfcfc, #f2f2f2);
+    background-image: -webkit-linear-gradient(#fcfcfc, #f2f2f2);
+    background-image: linear-gradient(#fcfcfc, #f2f2f2);
+}
+
+/* End Mixin */
