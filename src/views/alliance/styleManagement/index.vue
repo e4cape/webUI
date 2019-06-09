@@ -85,12 +85,14 @@ export default {
   },
   methods: {
     uploadSucc(Keys) {
-      this.imageUrl = Keys || []
-      if (this.imageUrl.length > 0) {
-        this.disableIf = false
-      } else {
-        this.disableIf = true
-      }
+      console.log(Keys);
+      this.TemplateList.push(Keys);
+      // this.imageUrl = Keys || []
+      // if (this.imageUrl.length > 0) {
+      //   this.disableIf = false
+      // } else {
+      //   this.disableIf = true
+      // }
     },
     // uploadImgLoadingChange(v) {
     //   this.uploadImgLoading = v
@@ -171,7 +173,7 @@ export default {
               }
             })
           })
-          .catch(() => { })
+          .catch(() => { }) 
       } else {
         this.$message({
           type: 'warning',

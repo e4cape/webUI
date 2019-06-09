@@ -254,7 +254,7 @@ export function ALLIANCE_API_TICKETBASIC_LISTBYLCB(parameters) {
   })
 }
 // 珠宝商PC端 - 联盟券管理 - 详情;
-// parameters: {"ticketId": "long"}
+// parameters: {"ticketId": "long"}`  `
 // response.data.Data: {"TicketId": "long", "TicketCode": "String", "StyleId": "long", "ImageUrl": "String", "TicketName": "String", "TicketType": "int", "RuleType": "int", "RulePrice": "long", "SettleSharedTime": "String", "SettleTransfTime": "String", "Expireb": "String", "Expiree": "String", "PrepareQty": "int", "GiftMaxQty": "int", "GiftPerQty": "int", "GiftValType": "int", "GiftValPrice": "long", "GiftVprices": "String", "SaleValPrice": "long", "SalePrice": "long", "Rates": "String", "Scopes": "String", "ActiveDays": "int", "ExpireDays": "int", "TipsDays": "int", "TicketNote": "String", "Note": "String", "CreateUser": "String", "CreateTime": "String", "State": "int"}
 export function ALLIANCE_API_TICKETBASIC_GET(parameters) {
   return fetch({
