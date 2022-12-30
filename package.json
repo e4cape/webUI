@@ -32,20 +32,20 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.5",
-    "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-service": "^3.0.5",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "add-name-vue": "^0.0.30",
     "babel-eslint": "^10.0.1",
     "compass-mixins": "^0.12.10",
     "compression-webpack-plugin": "^2.0.0",
     "eslint-plugin-vuefix": "^0.2.1",
-    "file-loader": "^2.0.0",
-    "mini-css-extract-plugin": "^0.4.4",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.7.2",
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^13.2.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "url-loader": "^1.1.2",
+    "url-loader": "^4.1.1",
     "vue-template-compiler": "^2.5.17"
   }
 }
